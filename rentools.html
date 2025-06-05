@@ -1,324 +1,358 @@
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Прокат и аренда инструментов RenTools04</title>
+<title>Прокат и аренда инструментов</title>
 <style>
-    body {
-        margin: 0;
-        font-family: 'Segoe UI', sans-serif;
-        background: #121212;
-        color: #e0e0e0;
-    }
-    header {
-        background: #ff5722;
-        color: white; 
-        text-align: center;
-        padding: 30px 10px;
-        font-size: 28px;
-        font-weight: bold;
-        letter-spacing: 2px;
-    }
-    .container {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-        gap: 15px;
-        padding: 20px;
-    }
-    .card {
-        background: #1e1e1e;
-        border-radius: 10px;
-        padding: 15px;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-    .card h3 {
-        color: #ff9800;
-        margin: 0 0 10px;
-    }
-    .card p {
-        margin: 5px 0;
-        font-size: 16px;
-    }
-    .btn {
-        display: inline-block;
-        padding: 10px;
-        background: #4caf50;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        text-decoration: none;
-        text-align: center;
-        transition: background 0.3s;
-        margin-top: 10px;
-    }
-    .btn:hover {
-        background: #45a049;
-    }
-    .youtube-link {
-        margin-top: 8px;
-        font-size: 14px;
-        color: #03a9f4;
-        text-decoration: underline;
-    }
+    body { margin:0; font-family: Arial, sans-serif; background: #121212; color:#eee; }
+    header { background:#ff5722; color:white; text-align:center; padding:20px; font-size:26px; }
+    .container { display:grid; grid-template-columns:repeat(auto-fill, minmax(250px, 1fr)); gap:10px; padding:20px; }
+    .card { background:#1e1e1e; border-radius:10px; padding:10px; text-align:center; position:relative; }
+    .card h3 { margin:10px 0; color:#ff9800; font-size:18px; }
+    .card p { margin:5px 0; }
+    .card img { width:80px; height:80px; object-fit:cover; border-radius:5px; cursor:pointer; }
+    .enlarged { position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); width:300px; border:5px solid #ff9800; border-radius:10px; display:none; z-index:1000; }
+    .btn { display:inline-block; margin-top:8px; background:#4caf50; color:#fff; padding:8px 15px; border-radius:5px; text-decoration:none; }
+    .youtube-link { display:block; margin-top:5px; color:#03a9f4; font-size:14px; text-decoration:underline; }
 </style>
 </head>
 <body>
 
-<header>Прокат и аренда инструментов RenTools04⚒️🪛</header>
+<header>Прокат и аренда инструментов RentTools⚒️🛠️</header>
 
 <div class="container">
 
     <div class="card">
-        <h3>Пылесос KARCHER WD 3 PV-17</h3>
+        <h3>Пылесос KARCHER5500</h3>
+        <!-- Подставь свой путь к фото здесь -->
+        <img src="1.png" alt="🙈" onclick="enlargeImage(this.src)" onerror="this.src='https://i.imgur.com/kuV3P6M.png'">
         <p>Цена: 5500 ₸</p>
-        <a class="btn" href="https://wa.me/7756832891?text=Здравствуйте!%20Я%20хочу%20арендовать%20Пылесос%20KARCHER5500." target="_blank">Заказать</a>
-        <a class="youtube-link" href="https://www.youtube.com/results?search_query=Пылесос+KARCHER5500-инструкция" target="_blank">Как пользоваться?</a>
+        <a class="btn" href="https://wa.me/7756832891?text=Здравствуйте! Я хочу арендовать Пылесос KARCHER5500." target="_blank">Заказать</a>
+        <a class="youtube-link" href="https://www.youtube.com/results?search_query=Пылесос+KARCHER5500+инструкция" target="_blank">Как пользоваться?</a>
     </div>
     
     <div class="card">
         <h3>Штраборез</h3>
+        <!-- Подставь свой путь к фото здесь -->
+        <img src="" alt="🙈" onclick="enlargeImage(this.src)" onerror="this.src='https://i.imgur.com/kuV3P6M.png'">
         <p>Цена: 4000 ₸</p>
-        <a class="btn" href="https://wa.me/7756832891?text=Здравствуйте!%20Я%20хочу%20арендовать%20Штраборез." target="_blank">Заказать</a>
-        <a class="youtube-link" href="https://www.youtube.com/results?search_query=Штраборез-инструкция" target="_blank">Как пользоваться?</a>
+        <a class="btn" href="https://wa.me/7756832891?text=Здравствуйте! Я хочу арендовать Штраборез." target="_blank">Заказать</a>
+        <a class="youtube-link" href="https://www.youtube.com/results?search_query=Штраборез+инструкция" target="_blank">Как пользоваться?</a>
     </div>
     
     <div class="card">
         <h3>Болгарка АКБ</h3>
+        <!-- Подставь свой путь к фото здесь -->
+        <img src="" alt="Болгарка АКБ" onclick="enlargeImage(this.src)" onerror="this.src='https://i.imgur.com/kuV3P6M.png'">
         <p>Цена: 4000 ₸</p>
-        <a class="btn" href="https://wa.me/7756832891?text=Здравствуйте!%20Я%20хочу%20арендовать%20Болгарка%20АКБ." target="_blank">Заказать</a>
-        <a class="youtube-link" href="https://www.youtube.com/results?search_query=Болгарка+АКБ" target="_blank">Как пользоваться?</a>
+        <a class="btn" href="https://wa.me/7756832891?text=Здравствуйте! Я хочу арендовать Болгарка АКБ." target="_blank">Заказать</a>
+        <a class="youtube-link" href="https://www.youtube.com/results?search_query=Болгарка+АКБ+инструкция" target="_blank">Как пользоваться?</a>
     </div>
     
     <div class="card">
         <h3>Перфоратор</h3>
+        <!-- Подставь свой путь к фото здесь -->
+        <img src="" alt="Перфоратор" onclick="enlargeImage(this.src)" onerror="this.src='https://i.imgur.com/kuV3P6M.png'">
         <p>Цена: 4000 ₸</p>
-        <a class="btn" href="https://wa.me/7756832891?text=Здравствуйте!%20Я%20хочу%20арендовать%20Перфоратор." target="_blank">Заказать</a>
-        <a class="youtube-link" href="https://www.youtube.com/results?search_query=Перфоратор-инструкция" target="_blank">Как пользоваться?</a>
+        <a class="btn" href="https://wa.me/7756832891?text=Здравствуйте! Я хочу арендовать Перфоратор." target="_blank">Заказать</a>
+        <a class="youtube-link" href="https://www.youtube.com/results?search_query=Перфоратор+инструкция" target="_blank">Как пользоваться?</a>
     </div>
     
     <div class="card">
         <h3>Отбойный молоток</h3>
+        <!-- Подставь свой путь к фото здесь -->
+        <img src="" alt="Отбойный молоток" onclick="enlargeImage(this.src)" onerror="this.src='https://i.imgur.com/kuV3P6M.png'">
         <p>Цена: 4000 ₸</p>
-        <a class="btn" href="https://wa.me/7756832891?text=Здравствуйте!%20Я%20хочу%20арендовать%20Отбойный%20молоток." target="_blank">Заказать</a>
-        <a class="youtube-link" href="https://www.youtube.com/results?search_query=Отбойный+молоток-инструкция" target="_blank">Как пользоваться?</a>
+        <a class="btn" href="https://wa.me/7756832891?text=Здравствуйте! Я хочу арендовать Отбойный молоток." target="_blank">Заказать</a>
+        <a class="youtube-link" href="https://www.youtube.com/results?search_query=Отбойный+молоток+инструкция" target="_blank">Как пользоваться?</a>
     </div>
     
     <div class="card">
         <h3>Мотобур</h3>
+        <!-- Подставь свой путь к фото здесь -->
+        <img src="" alt="Мотобур" onclick="enlargeImage(this.src)" onerror="this.src='https://i.imgur.com/kuV3P6M.png'">
         <p>Цена: 4000 ₸</p>
-        <a class="btn" href="https://wa.me/7756832891?text=Здравствуйте!%20Я%20хочу%20арендовать%20Мотобур." target="_blank">Заказать</a>
-        <a class="youtube-link" href="https://www.youtube.com/results?search_query=Мотобур-инструкция" target="_blank">Как пользоваться?</a>
+        <a class="btn" href="https://wa.me/7756832891?text=Здравствуйте! Я хочу арендовать Мотобур." target="_blank">Заказать</a>
+        <a class="youtube-link" href="https://www.youtube.com/results?search_query=Мотобур+инструкция" target="_blank">Как пользоваться?</a>
     </div>
     
     <div class="card">
         <h3>Триммер</h3>
+        <!-- Подставь свой путь к фото здесь -->
+        <img src="" alt="Триммер" onclick="enlargeImage(this.src)" onerror="this.src='https://i.imgur.com/kuV3P6M.png'">
         <p>Цена: 4000 ₸</p>
-        <a class="btn" href="https://wa.me/7756832891?text=Здравствуйте!%20Я%20хочу%20арендовать%20Триммер." target="_blank">Заказать</a>
-        <a class="youtube-link" href="https://www.youtube.com/results?search_query=Триммер-инструкция" target="_blank">Как пользоваться?</a>
+        <a class="btn" href="https://wa.me/7756832891?text=Здравствуйте! Я хочу арендовать Триммер." target="_blank">Заказать</a>
+        <a class="youtube-link" href="https://www.youtube.com/results?search_query=Триммер+инструкция" target="_blank">Как пользоваться?</a>
     </div>
     
     <div class="card">
         <h3>Таль 3тн</h3>
+        <!-- Подставь свой путь к фото здесь -->
+        <img src="" alt="Таль 3тн" onclick="enlargeImage(this.src)" onerror="this.src='https://i.imgur.com/kuV3P6M.png'">
         <p>Цена: 3000 ₸</p>
-        <a class="btn" href="https://wa.me/7756832891?text=Здравствуйте!%20Я%20хочу%20арендовать%20Таль%203тн." target="_blank">Заказать</a>
-        <a class="youtube-link" href="https://www.youtube.com/results?search_query=Таль+3тн-инструкция" target="_blank">Как пользоваться?</a>
+        <a class="btn" href="https://wa.me/7756832891?text=Здравствуйте! Я хочу арендовать Таль 3тн." target="_blank">Заказать</a>
+        <a class="youtube-link" href="https://www.youtube.com/results?search_query=Таль+3тн+инструкция" target="_blank">Как пользоваться?</a>
     </div>
     
     <div class="card">
         <h3>Плиткорез (120)</h3>
+        <!-- Подставь свой путь к фото здесь -->
+        <img src="" alt="Плиткорез (120)" onclick="enlargeImage(this.src)" onerror="this.src='https://i.imgur.com/kuV3P6M.png'">
         <p>Цена: 7000 ₸</p>
-        <a class="btn" href="https://wa.me/7756832891?text=Здравствуйте!%20Я%20хочу%20арендовать%20Плиткорез%20(120)." target="_blank">Заказать</a>
-        <a class="youtube-link" href="https://www.youtube.com/results?search_query=Плиткорез+(120)-инструкция" target="_blank">Как пользоваться?</a>
+        <a class="btn" href="https://wa.me/7756832891?text=Здравствуйте! Я хочу арендовать Плиткорез (120)." target="_blank">Заказать</a>
+        <a class="youtube-link" href="https://www.youtube.com/results?search_query=Плиткорез+(120)+инструкция" target="_blank">Как пользоваться?</a>
     </div>
     
     <div class="card">
         <h3>Плиткорез (60)</h3>
+        <!-- Подставь свой путь к фото здесь -->
+        <img src="" alt="Плиткорез (60)" onclick="enlargeImage(this.src)" onerror="this.src='https://i.imgur.com/kuV3P6M.png'">
         <p>Цена: 4000 ₸</p>
-        <a class="btn" href="https://wa.me/7756832891?text=Здравствуйте!%20Я%20хочу%20арендовать%20Плиткорез%20(60)." target="_blank">Заказать</a>
-        <a class="youtube-link" href="https://www.youtube.com/results?search_query=Плиткорез+(60)-инструкция" target="_blank">Как пользоваться?</a>
+        <a class="btn" href="https://wa.me/7756832891?text=Здравствуйте! Я хочу арендовать Плиткорез (60)." target="_blank">Заказать</a>
+        <a class="youtube-link" href="https://www.youtube.com/results?search_query=Плиткорез+(60)+инструкция" target="_blank">Как пользоваться?</a>
     </div>
     
     <div class="card">
         <h3>Гвоздезабивной Пистолет воздушный</h3>
+        <!-- Подставь свой путь к фото здесь -->
+        <img src="" alt="Гвоздезабивной Пистолет воздушный" onclick="enlargeImage(this.src)" onerror="this.src='https://i.imgur.com/kuV3P6M.png'">
         <p>Цена: 10000 ₸</p>
-        <a class="btn" href="https://wa.me/7756832891?text=Здравствуйте!%20Я%20хочу%20арендовать%20Гвоздезабивной%20Пистолет%20воздушный." target="_blank">Заказать</a>
-        <a class="youtube-link" href="https://www.youtube.com/results?search_query=Гвоздезабивной+Пистолет+воздушный-инструкция" target="_blank">Как пользоваться?</a>
+        <a class="btn" href="https://wa.me/7756832891?text=Здравствуйте! Я хочу арендовать Гвоздезабивной Пистолет воздушный." target="_blank">Заказать</a>
+        <a class="youtube-link" href="https://www.youtube.com/results?search_query=Гвоздезабивной+Пистолет+воздушный+инструкция" target="_blank">Как пользоваться?</a>
     </div>
     
     <div class="card">
         <h3>Пила торцовочная</h3>
+        <!-- Подставь свой путь к фото здесь -->
+        <img src="" alt="Пила торцовочная" onclick="enlargeImage(this.src)" onerror="this.src='https://i.imgur.com/kuV3P6M.png'">
         <p>Цена: 5000 ₸</p>
-        <a class="btn" href="https://wa.me/7756832891?text=Здравствуйте!%20Я%20хочу%20арендовать%20Пила%20торцовочная." target="_blank">Заказать</a>
-        <a class="youtube-link" href="https://www.youtube.com/results?search_query=Пила+торцовочная-инструкция" target="_blank">Как пользоваться?</a>
+        <a class="btn" href="https://wa.me/7756832891?text=Здравствуйте! Я хочу арендовать Пила торцовочная." target="_blank">Заказать</a>
+        <a class="youtube-link" href="https://www.youtube.com/results?search_query=Пила+торцовочная+инструкция" target="_blank">Как пользоваться?</a>
     </div>
     
     <div class="card">
         <h3>Краскопульт безвоздушный</h3>
+        <!-- Подставь свой путь к фото здесь -->
+        <img src="" alt="Краскопульт безвоздушный" onclick="enlargeImage(this.src)" onerror="this.src='https://i.imgur.com/kuV3P6M.png'">
         <p>Цена: 10000 ₸</p>
-        <a class="btn" href="https://wa.me/7756832891?text=Здравствуйте!%20Я%20хочу%20арендовать%20Краскопульт%20безвоздушный." target="_blank">Заказать</a>
-        <a class="youtube-link" href="https://www.youtube.com/results?search_query=Краскопульт+безвоздушный-инструкция" target="_blank">Как пользоваться?</a>
+        <a class="btn" href="https://wa.me/7756832891?text=Здравствуйте! Я хочу арендовать Краскопульт безвоздушный." target="_blank">Заказать</a>
+        <a class="youtube-link" href="https://www.youtube.com/results?search_query=Краскопульт+безвоздушный+инструкция" target="_blank">Как пользоваться?</a>
     </div>
     
     <div class="card">
         <h3>Пушка</h3>
+        <!-- Подставь свой путь к фото здесь -->
+        <img src="" alt="Пушка" onclick="enlargeImage(this.src)" onerror="this.src='https://i.imgur.com/kuV3P6M.png'">
         <p>Цена: 3000 ₸</p>
-        <a class="btn" href="https://wa.me/7756832891?text=Здравствуйте!%20Я%20хочу%20арендовать%20Пушка." target="_blank">Заказать</a>
-        <a class="youtube-link" href="https://www.youtube.com/results?search_query=Пушка-инструкция" target="_blank">Как пользоваться?</a>
+        <a class="btn" href="https://wa.me/7756832891?text=Здравствуйте! Я хочу арендовать Пушка." target="_blank">Заказать</a>
+        <a class="youtube-link" href="https://www.youtube.com/results?search_query=Пушка+инструкция" target="_blank">Как пользоваться?</a>
     </div>
     
     <div class="card">
         <h3>Пропан баллон</h3>
+        <!-- Подставь свой путь к фото здесь -->
+        <img src="" alt="Пропан баллон" onclick="enlargeImage(this.src)" onerror="this.src='https://i.imgur.com/kuV3P6M.png'">
         <p>Цена: 3000 ₸</p>
-        <a class="btn" href="https://wa.me/7756832891?text=Здравствуйте!%20Я%20хочу%20арендовать%20Пропан%20баллон." target="_blank">Заказать</a>
-        <a class="youtube-link" href="https://www.youtube.com/results?search_query=Пропан+баллон-инструкция" target="_blank">Как пользоваться?</a>
+        <a class="btn" href="https://wa.me/7756832891?text=Здравствуйте! Я хочу арендовать Пропан баллон." target="_blank">Заказать</a>
+        <a class="youtube-link" href="https://www.youtube.com/results?search_query=Пропан+баллон+инструкция" target="_blank">Как пользоваться?</a>
     </div>
     
     <div class="card">
         <h3>Лобзик</h3>
+        <!-- Подставь свой путь к фото здесь -->
+        <img src="" alt="Лобзик" onclick="enlargeImage(this.src)" onerror="this.src='https://i.imgur.com/kuV3P6M.png'">
         <p>Цена: 3000 ₸</p>
-        <a class="btn" href="https://wa.me/7756832891?text=Здравствуйте!%20Я%20хочу%20арендовать%20Лобзик." target="_blank">Заказать</a>
-        <a class="youtube-link" href="https://www.youtube.com/results?search_query=Лобзик-инструкция" target="_blank">Как пользоваться?</a>
+        <a class="btn" href="https://wa.me/7756832891?text=Здравствуйте! Я хочу арендовать Лобзик." target="_blank">Заказать</a>
+        <a class="youtube-link" href="https://www.youtube.com/results?search_query=Лобзик+инструкция" target="_blank">Как пользоваться?</a>
     </div>
     
     <div class="card">
         <h3>Пресс-клещ</h3>
+        <!-- Подставь свой путь к фото здесь -->
+        <img src="" alt="Пресс-клещ" onclick="enlargeImage(this.src)" onerror="this.src='https://i.imgur.com/kuV3P6M.png'">
         <p>Цена: 4000 ₸</p>
-        <a class="btn" href="https://wa.me/7756832891?text=Здравствуйте!%20Я%20хочу%20арендовать%20Пресс-клещ." target="_blank">Заказать</a>
-        <a class="youtube-link" href="https://www.youtube.com/results?search_query=Пресс-клещ-инструкция" target="_blank">Как пользоваться?</a>
+        <a class="btn" href="https://wa.me/7756832891?text=Здравствуйте! Я хочу арендовать Пресс-клещ." target="_blank">Заказать</a>
+        <a class="youtube-link" href="https://www.youtube.com/results?search_query=Пресс-клещ+инструкция" target="_blank">Как пользоваться?</a>
     </div>
     
     <div class="card">
         <h3>Тачка</h3>
+        <!-- Подставь свой путь к фото здесь -->
+        <img src="" alt="Тачка" onclick="enlargeImage(this.src)" onerror="this.src='https://i.imgur.com/kuV3P6M.png'">
         <p>Цена: 3000 ₸</p>
-        <a class="btn" href="https://wa.me/7756832891?text=Здравствуйте!%20Я%20хочу%20арендовать%20Тачка." target="_blank">Заказать</a>
-        <a class="youtube-link" href="https://www.youtube.com/results?search_query=Тачка-инструкция" target="_blank">Как пользоваться?</a>
+        <a class="btn" href="https://wa.me/7756832891?text=Здравствуйте! Я хочу арендовать Тачка." target="_blank">Заказать</a>
+        <a class="youtube-link" href="https://www.youtube.com/results?search_query=Тачка+инструкция" target="_blank">Как пользоваться?</a>
     </div>
     
     <div class="card">
         <h3>Шлифовальная машинка</h3>
+        <!-- Подставь свой путь к фото здесь -->
+        <img src="" alt="Шлифовальная машинка" onclick="enlargeImage(this.src)" onerror="this.src='https://i.imgur.com/kuV3P6M.png'">
         <p>Цена: 4000 ₸</p>
-        <a class="btn" href="https://wa.me/7756832891?text=Здравствуйте!%20Я%20хочу%20арендовать%20Шлифовальная%20машинка." target="_blank">Заказать</a>
-        <a class="youtube-link" href="https://www.youtube.com/results?search_query=Шлифовальная+машинка-инструкция" target="_blank">Как пользоваться?</a>
+        <a class="btn" href="https://wa.me/7756832891?text=Здравствуйте! Я хочу арендовать Шлифовальная машинка." target="_blank">Заказать</a>
+        <a class="youtube-link" href="https://www.youtube.com/results?search_query=Шлифовальная+машинка+инструкция" target="_blank">Как пользоваться?</a>
     </div>
     
     <div class="card">
         <h3>Лазер</h3>
+        <!-- Подставь свой путь к фото здесь -->
+        <img src="" alt="Лазер" onclick="enlargeImage(this.src)" onerror="this.src='https://i.imgur.com/kuV3P6M.png'">
         <p>Цена: 3000 ₸</p>
-        <a class="btn" href="https://wa.me/7756832891?text=Здравствуйте!%20Я%20хочу%20арендовать%20Лазер." target="_blank">Заказать</a>
-        <a class="youtube-link" href="https://www.youtube.com/results?search_query=Лазер-инструкция" target="_blank">Как пользоваться?</a>
+        <a class="btn" href="https://wa.me/7756832891?text=Здравствуйте! Я хочу арендовать Лазер." target="_blank">Заказать</a>
+        <a class="youtube-link" href="https://www.youtube.com/results?search_query=Лазер+инструкция" target="_blank">Как пользоваться?</a>
     </div>
     
     <div class="card">
         <h3>Лобзик</h3>
+        <!-- Подставь свой путь к фото здесь -->
+        <img src="" alt="Лобзик" onclick="enlargeImage(this.src)" onerror="this.src='https://i.imgur.com/kuV3P6M.png'">
         <p>Цена: 3000 ₸</p>
-        <a class="btn" href="https://wa.me/7756832891?text=Здравствуйте!%20Я%20хочу%20арендовать%20Лобзик." target="_blank">Заказать</a>
-        <a class="youtube-link" href="https://www.youtube.com/results?search_query=Лобзик-инструкция" target="_blank">Как пользоваться?</a>
+        <a class="btn" href="https://wa.me/7756832891?text=Здравствуйте! Я хочу арендовать Лобзик." target="_blank">Заказать</a>
+        <a class="youtube-link" href="https://www.youtube.com/results?search_query=Лобзик+инструкция" target="_blank">Как пользоваться?</a>
     </div>
     
     <div class="card">
         <h3>Генератор 3квт</h3>
+        <!-- Подставь свой путь к фото здесь -->
+        <img src="" alt="Генератор 3квт" onclick="enlargeImage(this.src)" onerror="this.src='https://i.imgur.com/kuV3P6M.png'">
         <p>Цена: 6000 ₸</p>
-        <a class="btn" href="https://wa.me/7756832891?text=Здравствуйте!%20Я%20хочу%20арендовать%20Генератор%203квт." target="_blank">Заказать</a>
-        <a class="youtube-link" href="https://www.youtube.com/results?search_query=Генератор+3квт-инструкция" target="_blank">Как пользоваться?</a>
+        <a class="btn" href="https://wa.me/7756832891?text=Здравствуйте! Я хочу арендовать Генератор 3квт." target="_blank">Заказать</a>
+        <a class="youtube-link" href="https://www.youtube.com/results?search_query=Генератор+3квт+инструкция" target="_blank">Как пользоваться?</a>
     </div>
     
     <div class="card">
         <h3>Фен</h3>
+        <!-- Подставь свой путь к фото здесь -->
+        <img src="" alt="Фен" onclick="enlargeImage(this.src)" onerror="this.src='https://i.imgur.com/kuV3P6M.png'">
         <p>Цена: 3000 ₸</p>
-        <a class="btn" href="https://wa.me/7756832891?text=Здравствуйте!%20Я%20хочу%20арендовать%20Фен." target="_blank">Заказать</a>
-        <a class="youtube-link" href="https://www.youtube.com/results?search_query=Фен-инструкция" target="_blank">Как пользоваться?</a>
+        <a class="btn" href="https://wa.me/7756832891?text=Здравствуйте! Я хочу арендовать Фен." target="_blank">Заказать</a>
+        <a class="youtube-link" href="https://www.youtube.com/results?search_query=Фен+инструкция" target="_blank">Как пользоваться?</a>
     </div>
     
     <div class="card">
         <h3>Дрель</h3>
+        <!-- Подставь свой путь к фото здесь -->
+        <img src="" alt="Дрель" onclick="enlargeImage(this.src)" onerror="this.src='https://i.imgur.com/kuV3P6M.png'">
         <p>Цена: 2500 ₸</p>
-        <a class="btn" href="https://wa.me/7756832891?text=Здравствуйте!%20Я%20хочу%20арендовать%20Дрель." target="_blank">Заказать</a>
-        <a class="youtube-link" href="https://www.youtube.com/results?search_query=Дрель-инструкция" target="_blank">Как пользоваться?</a>
+        <a class="btn" href="https://wa.me/7756832891?text=Здравствуйте! Я хочу арендовать Дрель." target="_blank">Заказать</a>
+        <a class="youtube-link" href="https://www.youtube.com/results?search_query=Дрель+инструкция" target="_blank">Как пользоваться?</a>
     </div>
     
     <div class="card">
         <h3>Шруповерт</h3>
+        <!-- Подставь свой путь к фото здесь -->
+        <img src="" alt="Шруповерт" onclick="enlargeImage(this.src)" onerror="this.src='https://i.imgur.com/kuV3P6M.png'">
         <p>Цена: 2500 ₸</p>
-        <a class="btn" href="https://wa.me/7756832891?text=Здравствуйте!%20Я%20хочу%20арендовать%20Шруповерт." target="_blank">Заказать</a>
-        <a class="youtube-link" href="https://www.youtube.com/results?search_query=Шруповерт-инструкция" target="_blank">Как пользоваться?</a>
+        <a class="btn" href="https://wa.me/7756832891?text=Здравствуйте! Я хочу арендовать Шруповерт." target="_blank">Заказать</a>
+        <a class="youtube-link" href="https://www.youtube.com/results?search_query=Шруповерт+инструкция" target="_blank">Как пользоваться?</a>
     </div>
     
     <div class="card">
         <h3>Лампа Лосьева</h3>
+        <!-- Подставь свой путь к фото здесь -->
+        <img src="" alt="Лампа Лосьева" onclick="enlargeImage(this.src)" onerror="this.src='https://i.imgur.com/kuV3P6M.png'">
         <p>Цена: 2000 ₸</p>
-        <a class="btn" href="https://wa.me/7756832891?text=Здравствуйте!%20Я%20хочу%20арендовать%20Лампа%20Лосьева." target="_blank">Заказать</a>
-        <a class="youtube-link" href="https://www.youtube.com/results?search_query=Лампа+Лосьева-инструкция" target="_blank">Как пользоваться?</a>
+        <a class="btn" href="https://wa.me/7756832891?text=Здравствуйте! Я хочу арендовать Лампа Лосьева." target="_blank">Заказать</a>
+        <a class="youtube-link" href="https://www.youtube.com/results?search_query=Лампа+Лосьева+инструкция" target="_blank">Как пользоваться?</a>
     </div>
     
     <div class="card">
         <h3>Сварочный аппарат Ресанта</h3>
+        <!-- Подставь свой путь к фото здесь -->
+        <img src="" alt="Сварочный аппарат Ресанта" onclick="enlargeImage(this.src)" onerror="this.src='https://i.imgur.com/kuV3P6M.png'">
         <p>Цена: 5000 ₸</p>
-        <a class="btn" href="https://wa.me/7756832891?text=Здравствуйте!%20Я%20хочу%20арендовать%20Сварочный%20аппарат%20Ресанта." target="_blank">Заказать</a>
-        <a class="youtube-link" href="https://www.youtube.com/results?search_query=Сварочный+аппарат+Ресанта-инструкция" target="_blank">Как пользоваться?</a>
+        <a class="btn" href="https://wa.me/7756832891?text=Здравствуйте! Я хочу арендовать Сварочный аппарат Ресанта." target="_blank">Заказать</a>
+        <a class="youtube-link" href="https://www.youtube.com/results?search_query=Сварочный+аппарат+Ресанта+инструкция" target="_blank">Как пользоваться?</a>
     </div>
     
     <div class="card">
         <h3>Контактная сварка</h3>
+        <!-- Подставь свой путь к фото здесь -->
+        <img src="" alt="Контактная сварка" onclick="enlargeImage(this.src)" onerror="this.src='https://i.imgur.com/kuV3P6M.png'">
         <p>Цена: 7000 ₸</p>
-        <a class="btn" href="https://wa.me/7756832891?text=Здравствуйте!%20Я%20хочу%20арендовать%20Контактная%20сварка." target="_blank">Заказать</a>
-        <a class="youtube-link" href="https://www.youtube.com/results?search_query=Контактная+сварка-инструкция" target="_blank">Как пользоваться?</a>
+        <a class="btn" href="https://wa.me/7756832891?text=Здравствуйте! Я хочу арендовать Контактная сварка." target="_blank">Заказать</a>
+        <a class="youtube-link" href="https://www.youtube.com/results?search_query=Контактная+сварка+инструкция" target="_blank">Как пользоваться?</a>
     </div>
     
     <div class="card">
         <h3>Казан ошак</h3>
+        <!-- Подставь свой путь к фото здесь -->
+        <img src="" alt="Казан ошак" onclick="enlargeImage(this.src)" onerror="this.src='https://i.imgur.com/kuV3P6M.png'">
         <p>Цена: 3000 ₸</p>
-        <a class="btn" href="https://wa.me/7756832891?text=Здравствуйте!%20Я%20хочу%20арендовать%20Казан%20ошак." target="_blank">Заказать</a>
-        <a class="youtube-link" href="https://www.youtube.com/results?search_query=Казан+ошак-инструкция" target="_blank">Как пользоваться?</a>
+        <a class="btn" href="https://wa.me/7756832891?text=Здравствуйте! Я хочу арендовать Казан ошак." target="_blank">Заказать</a>
+        <a class="youtube-link" href="https://www.youtube.com/results?search_query=Казан+ошак+инструкция" target="_blank">Как пользоваться?</a>
     </div>
     
     <div class="card">
         <h3>Титан</h3>
+        <!-- Подставь свой путь к фото здесь -->
+        <img src="" alt="Титан" onclick="enlargeImage(this.src)" onerror="this.src='https://i.imgur.com/kuV3P6M.png'">
         <p>Цена: 3000 ₸</p>
-        <a class="btn" href="https://wa.me/7756832891?text=Здравствуйте!%20Я%20хочу%20арендовать%20Титан." target="_blank">Заказать</a>
-        <a class="youtube-link" href="https://www.youtube.com/results?search_query=Титан-инструкция" target="_blank">Как пользоваться?</a>
+        <a class="btn" href="https://wa.me/7756832891?text=Здравствуйте! Я хочу арендовать Титан." target="_blank">Заказать</a>
+        <a class="youtube-link" href="https://www.youtube.com/results?search_query=Титан+инструкция" target="_blank">Как пользоваться?</a>
     </div>
     
     <div class="card">
         <h3>Стремянка</h3>
+        <!-- Подставь свой путь к фото здесь -->
+        <img src="" alt="Стремянка" onclick="enlargeImage(this.src)" onerror="this.src='https://i.imgur.com/kuV3P6M.png'">
         <p>Цена: 3000 ₸</p>
-        <a class="btn" href="https://wa.me/7756832891?text=Здравствуйте!%20Я%20хочу%20арендовать%20Стремянка." target="_blank">Заказать</a>
-        <a class="youtube-link" href="https://www.youtube.com/results?search_query=Стремянка-инструкция" target="_blank">Как пользоваться?</a>
+        <a class="btn" href="https://wa.me/7756832891?text=Здравствуйте! Я хочу арендовать Стремянка." target="_blank">Заказать</a>
+        <a class="youtube-link" href="https://www.youtube.com/results?search_query=Стремянка+инструкция" target="_blank">Как пользоваться?</a>
     </div>
     
     <div class="card">
         <h3>Утюг пластиковый</h3>
+        <!-- Подставь свой путь к фото здесь -->
+        <img src="" alt="Утюг пластиковый" onclick="enlargeImage(this.src)" onerror="this.src='https://i.imgur.com/kuV3P6M.png'">
         <p>Цена: 2500 ₸</p>
-        <a class="btn" href="https://wa.me/7756832891?text=Здравствуйте!%20Я%20хочу%20арендовать%20Утюг%20пластиковый." target="_blank">Заказать</a>
-        <a class="youtube-link" href="https://www.youtube.com/results?search_query=Утюг+пластиковый-инструкция" target="_blank">Как пользоваться?</a>
+        <a class="btn" href="https://wa.me/7756832891?text=Здравствуйте! Я хочу арендовать Утюг пластиковый." target="_blank">Заказать</a>
+        <a class="youtube-link" href="https://www.youtube.com/results?search_query=Утюг+пластиковый+инструкция" target="_blank">Как пользоваться?</a>
     </div>
     
     <div class="card">
         <h3>Штроборез</h3>
+        <!-- Подставь свой путь к фото здесь -->
+        <img src="" alt="Штроборез" onclick="enlargeImage(this.src)" onerror="this.src='https://i.imgur.com/kuV3P6M.png'">
         <p>Цена: 4000 ₸</p>
-        <a class="btn" href="https://wa.me/7756832891?text=Здравствуйте!%20Я%20хочу%20арендовать%20Штроборез." target="_blank">Заказать</a>
-        <a class="youtube-link" href="https://www.youtube.com/results?search_query=Штроборез-инструкция" target="_blank">Как пользоваться?</a>
+        <a class="btn" href="https://wa.me/7756832891?text=Здравствуйте! Я хочу арендовать Штроборез." target="_blank">Заказать</a>
+        <a class="youtube-link" href="https://www.youtube.com/results?search_query=Штроборез+инструкция" target="_blank">Как пользоваться?</a>
     </div>
     
     <div class="card">
         <h3>Компрессор</h3>
+        <!-- Подставь свой путь к фото здесь -->
+        <img src="" alt="Компрессор" onclick="enlargeImage(this.src)" onerror="this.src='https://i.imgur.com/kuV3P6M.png'">
         <p>Цена: 5000 ₸</p>
-        <a class="btn" href="https://wa.me/7756832891?text=Здравствуйте!%20Я%20хочу%20арендовать%20Компрессор." target="_blank">Заказать</a>
-        <a class="youtube-link" href="https://www.youtube.com/results?search_query=Компрессор-инструкция" target="_blank">Как пользоваться?</a>
+        <a class="btn" href="https://wa.me/7756832891?text=Здравствуйте! Я хочу арендовать Компрессор." target="_blank">Заказать</a>
+        <a class="youtube-link" href="https://www.youtube.com/results?search_query=Компрессор+инструкция" target="_blank">Как пользоваться?</a>
     </div>
     
     <div class="card">
         <h3>Удлинитель</h3>
+        <!-- Подставь свой путь к фото здесь -->
+        <img src="" alt="Удлинитель" onclick="enlargeImage(this.src)" onerror="this.src='https://i.imgur.com/kuV3P6M.png'">
         <p>Цена: 2000 ₸</p>
-        <a class="btn" href="https://wa.me/7756832891?text=Здравствуйте!%20Я%20хочу%20арендовать%20Удлинитель." target="_blank">Заказать</a>
-        <a class="youtube-link" href="https://www.youtube.com/results?search_query=Удлинитель-инструкция" target="_blank">Как пользоваться?</a>
+        <a class="btn" href="https://wa.me/7756832891?text=Здравствуйте! Я хочу арендовать Удлинитель." target="_blank">Заказать</a>
+        <a class="youtube-link" href="https://www.youtube.com/results?search_query=Удлинитель+инструкция" target="_blank">Как пользоваться?</a>
     </div>
     
 </div>
+
+<img id="enlargedImage" class="enlarged" src="" alt="Увеличенное фото">
+
+<script>
+function enlargeImage(src) {
+    if (!src || src.includes('i.imgur.com/kuV3P6M.png')) return; // нет фото, не увеличиваем
+    var enlarged = document.getElementById('enlargedImage');
+    enlarged.src = src;
+    enlarged.style.display = 'block';
+    setTimeout(function(){
+        enlarged.style.display = 'none';
+    }, 3000);
+}
+</script>
 
 </body>
 </html>
