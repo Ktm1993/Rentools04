@@ -2,28 +2,148 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Прокат и аренда инструментов</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Прокат и аренда инструментов - RenTools04</title>
 <style>
-    body { margin:0; font-family: Arial, sans-serif; background: #121212; color:#eee; }
-    header { background:#ff5722; color:white; text-align:center; padding:20px; font-size:26px; }
-    .container { display:grid; grid-template-columns:repeat(auto-fill, minmax(250px, 1fr)); gap:10px; padding:20px; }
-    .card { background:#1e1e1e; border-radius:10px; padding:10px; text-align:center; position:relative; }
-    .card h3 { margin:10px 0; color:#ff9800; font-size:18px; }
-    .card p { margin:5px 0; }
-    .card img { width:80px; height:80px; object-fit:cover; border-radius:5px; cursor:pointer; }
-    .enlarged { position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); width:300px; border:5px solid #ff9800; border-radius:10px; display:none; z-index:1000; }
-    .btn { display:inline-block; margin-top:8px; background:#4caf50; color:#fff; padding:8px 15px; border-radius:5px; text-decoration:none; }
-    .youtube-link { display:block; margin-top:5px; color:#03a9f4; font-size:14px; text-decoration:underline; }
+:root {
+  --primary: #FF6D00;
+  --secondary: #FF5722;
+  --background: #121212;
+  --card-bg: #1F1F1F;
+  --text: #FFFFFF;
+  --shadow: rgba(0, 0, 0, 0.5);
+  --accent: #FFA726;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--background);
+  color: var(--text);
+  text-align: center;
+  padding: 20px;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+header {
+  background: var(--primary);
+  color: #fff;
+  text-align: center;
+  padding: 25px 15px;
+  font-size: 24px;
+  font-weight: 700;
+  box-shadow: 0 4px 8px var(--shadow);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 15px;
+  padding: 20px 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 2px 8px var(--shadow);
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  overflow: hidden;
+  user-select: none;
+  touch-action: manipulation;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
+}
+
+.card img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  border: 2px solid var(--primary);
+  background: #2c2c2c;
+  padding: 8px;
+}
+
+.card h3 {
+  color: var(--accent);
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.card p.price {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--primary);
+  margin: 8px 0;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--secondary);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 5px;
+}
+
+.btn:hover {
+  background: #e64a19;
+}
+
+.youtube-link {
+  display: inline-block;
+  margin-top: 5px;
+  color: var(--accent);
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.youtube-link:hover {
+  color: #ffb74d;
+  text-decoration: underline;
+}
+
+@keyframes emojiBurst {
+  0% { opacity: 1; transform: translateY(0) scale(1); }
+  100% { opacity: 0; transform: translateY(-100px) scale(0.5); }
+}
+.emoji {
+  position: fixed;
+  font-size: 24px;
+  animation: emojiBurst 1s forwards;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate3d(0,0,0);
+}
 </style>
 </head>
 <body>
 
-<header>Прокат и аренда инструментов RenTools04⚒️🛠️</header>
+<header>Прокат и аренда инструментов RenTools04</header>
 
 <div class="container">
-
-    <div class="card">
+   <div class="card">
         <h3>Пылесос KARCHER WD3 PV-17</h3>
         <!-- Подставь свой путь к фото здесь -->
         <img src="krchr.webp" alt="🙈" onclick="enlargeImage(this.src)" onerror="this.src='https://i.imgur.com/kuV3P6M.png'">
@@ -319,21 +439,45 @@
         <a class="btn" href="https://wa.me/7756832891?text=Здравствуйте! Я хочу арендовать Удлинитель." target="_blank">Заказать</a>
         <a class="youtube-link" href="https://www.youtube.com/results?search_query=Удлинитель+инструкция" target="_blank">Как пользоваться?</a>
     </div>
-    
 </div>
 
-<img id="enlargedImage" class="enlarged" src="" alt="Увеличенное фото">
-
 <script>
-function enlargeImage(src) {
-    if (!src || src.includes('i.imgur.com/kuV3P6M.png')) return; // нет фото, не увеличиваем
-    var enlarged = document.getElementById('enlargedImage');
-    enlarged.src = src;
-    enlarged.style.display = 'block';
-    setTimeout(function(){
-        enlarged.style.display = 'none';
-    }, 3000);
+const emojis = ["⚒️","🪛","🪓","🔨","🛠️","🔧","⛏️","🪛","🔩","🧱","🪚","🔌","🔩"];
+
+function createEmoji(x, y) {
+  const emoji = document.createElement('div');
+  emoji.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+  emoji.classList.add('emoji');
+  emoji.style.left = `${x}px`;
+  emoji.style.top = `${y}px`;
+  document.body.appendChild(emoji);
+  setTimeout(() => emoji.remove(), 1000);
 }
+
+function handleInteraction(e) {
+  e.preventDefault();
+  const x = e.clientX || (e.touches && e.touches[0].clientX) || 0;
+  const y = e.clientY || (e.touches && e.touches[0].clientY) || 0;
+
+  for (let i = 0; i < 12; i++) {
+    setTimeout(() => {
+      createEmoji(x + (Math.random() * 30 - 15), y + (Math.random() * 30 - 15));
+    }, i * 30);
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.card').forEach(card => {
+    card.addEventListener('click', handleInteraction);
+    card.addEventListener('touchstart', handleInteraction, {passive: false});
+  });
+
+  // Отключаем "фонтан" при нажатии на ссылки, кнопки и изображения
+  document.querySelectorAll('.card a, .card img').forEach(innerEl => {
+    innerEl.addEventListener('click', e => e.stopPropagation());
+    innerEl.addEventListener('touchstart', e => e.stopPropagation());
+  });
+});
 </script>
 
 </body>
